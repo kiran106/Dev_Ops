@@ -4,7 +4,7 @@
   <groupId>com.Narik.webproject</groupId>
   <artifactId>NarikWebApp</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1</version>
   <name>NarikWebApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -15,6 +15,32 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+
+    <developers>
+        <developer>
+            <name>Kiran Madala</name>
+            <email>kiranmadala12@gmail.com</email>
+        </developer>
+    </developers>
+<!-- nexus configuration started -->
+<distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Internal Releases</name>
+            <url>http://35.192.73.37:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://35.192.73.37:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+	
+<!-- nexus configuration ended -->
+
+
+
   <build>
     <finalName>NarikWebApp</finalName>
 
@@ -35,5 +61,6 @@
 </plugin>
 </plugins>
 </pluginManagement>
+
   </build>
 </project>
